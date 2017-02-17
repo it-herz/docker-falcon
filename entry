@@ -1,0 +1,4 @@
+#!/bin/sh
+mkdir -p /run/uwsgi
+chown www-data:www-data -R /run/uwsgi
+uwsgi --ini-paste /etc/uwsgi.conf --enable-threads -w app
